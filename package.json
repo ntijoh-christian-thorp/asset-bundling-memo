@@ -1,0 +1,18 @@
+{
+  "name": "asset-bundling-memo",
+  "version": "0.0.2",
+  "main": "./public/js/app.js",
+  "author": "linus&chriggan",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "esbuild src/index.ts --loader:.png=dataurl --sourcemap --bundle --outfile=public/js/app.js  --minify",
+    "dev": "esbuild src/index.ts --loader:.png=dataurl --sourcemap --bundle --outfile=public/js/app.js  --watch"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.200"
+  }
+}
